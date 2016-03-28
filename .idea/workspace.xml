@@ -760,7 +760,7 @@
       <workItem from="1459186263621" duration="861000" />
       <workItem from="1459196605189" duration="966000" />
       <workItem from="1459197617636" duration="1266000" />
-      <workItem from="1459198905407" duration="1659000" />
+      <workItem from="1459198905407" duration="1681000" />
     </task>
     <task id="LOCAL-00001" summary="started project">
       <created>1459197654980</created>
@@ -790,11 +790,18 @@
       <option name="project" value="LOCAL" />
       <updated>1459199082078</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="changes in ConnectToDB class2">
+      <created>1459200729698</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1459200729698</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4752000" />
+    <option name="totallyTimeSpent" value="4774000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -845,7 +852,8 @@
     <MESSAGE value="started project" />
     <MESSAGE value="changes in Race.vaja comments" />
     <MESSAGE value="changes in ConnectToDB class" />
-    <option name="LAST_COMMIT_MESSAGE" value="changes in ConnectToDB class" />
+    <MESSAGE value="changes in ConnectToDB class2" />
+    <option name="LAST_COMMIT_MESSAGE" value="changes in ConnectToDB class2" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
