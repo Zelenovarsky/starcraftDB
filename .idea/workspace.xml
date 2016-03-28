@@ -1,17 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3b437be7-570b-4095-a052-3a395f248adf" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/starcraftDB_war_exploded/WEB-INF/classes/ConnectToDB.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/starcraftDB_war_exploded/WEB-INF/classes/scTables/Race.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/starcraftDB/ConnectToDB.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/starcraftDB/scTables/Race.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/starcraftDB_war_exploded/WEB-INF/web.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/starcraftDB_war_exploded/hello.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/starcraftDB_war_exploded/index.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ConnectToDB.java" afterPath="$PROJECT_DIR$/src/ConnectToDB.java" />
-    </list>
+    <list default="true" id="3b437be7-570b-4095-a052-3a395f248adf" name="Default" comment="" />
     <ignored path="starcraftDB.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/out/" />
@@ -760,7 +750,7 @@
       <workItem from="1459186263621" duration="861000" />
       <workItem from="1459196605189" duration="966000" />
       <workItem from="1459197617636" duration="1266000" />
-      <workItem from="1459198905407" duration="1681000" />
+      <workItem from="1459198905407" duration="2291000" />
     </task>
     <task id="LOCAL-00001" summary="started project">
       <created>1459197654980</created>
@@ -801,7 +791,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4774000" />
+    <option name="totallyTimeSpent" value="5384000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
