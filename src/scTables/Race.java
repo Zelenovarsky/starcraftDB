@@ -18,20 +18,16 @@ public class Race {
     static Statement statement = null;
 //    public static void main(String[] args){
 //
-//    Connection connection = null;
+//    Connection connesction = null;
 //    try{
 //    connection = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe","raynor","starcraft");
-//    } catch  (SQLException e){
+//    } catch  (SQLExceptionasdasd e){
 //    System.out.println("failed");
 //            e.printStackTrace();
 //    return;
 //}
 //}
 
-//
-//    TODO:
-//    1) DB creation
-//    2) DB deletion
 
     static ResultSet readTableRace() throws SQLException {
         statement = connection.createStatement();
