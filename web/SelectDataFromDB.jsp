@@ -13,8 +13,8 @@
 <body>
 <h1>Select data from a db</h1>
 <form name="displayForm" action="display.jsp" method="POST">
-    <table>
-        <tbody>
+    <table border="0">
+        <body>
         <tr>
             <td>race_id:</td>
             <td><input type="number" name="id" value="" size="10"/></td>
@@ -23,7 +23,8 @@
             <td>race_name:</td>
             <td><input type="text" name="name" value="" size="50"/></td>
         </tr>
-        </tbody>
+
+        </body>
     </table>
     <input type="reset" value="Clear" name="clear" />
     <input type="submit" value="Submit" name="submit" />

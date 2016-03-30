@@ -12,9 +12,7 @@
 </head>
 <body>
 <%
-    int a = 3;
-    int b =4;
-    out.println("a=");
+    out.println("helloWorld");
 %>
 
 

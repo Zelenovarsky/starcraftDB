@@ -12,30 +12,17 @@ import java.sql.*;
  */
 public class Race {
 
-    static Connection connection;
-    static CallableStatement createStatement = null;
-    static ResultSet resultSet = null;
-    static Statement statement = null;
-//    public static void main(String[] args){
-//
-//    Connection connesction = null;
-//    try{
-//    connection = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe","raynor","starcraft");
-//    } catch  (SQLExceptionasdasd e){
-//    System.out.println("failed");
-//            e.printStackTrace();
-//    return;
-//}
-//}
+    public static Connection connection;
+    public static CallableStatement createStatement = null;
+    public static ResultSet resultSet = null;
+    public static Statement statement = null;
+
 
 
     static ResultSet readTableRace() throws SQLException {
         statement = connection.createStatement();
         resultSet = statement.executeQuery("select * from race ");
         return resultSet;
-//        statement = connection.prepareStatement("select * from race");
-//        resultSet = statement.executeQuery();
-//        return resultSet;
     }
 
     static void clean(String name) throws SQLException {
@@ -64,18 +51,11 @@ public class Race {
         createStatement.execute();
     }
 
-    static ResultSet find(String race_name) throws SQLException {
-        PreparedStatement ps = connection.prepareStatement("select * from race where race_name=?");
+    public static ResultSet find(String race_name) throws SQLException {
+        PreparedStatement ps = connection.prepareStatement("select race_id, race_name from race where race_name=?");
         ps.setString(1,race_name);
         resultSet=ps.executeQuery();
         return resultSet;
-
-
-
-//        statement = connection.createStatement();
-//        resultSet = statement.executeQuery("select * from race where raceId=? ");
-//
-//        return resultSet;
     }
 
     public static void main(String[] args) throws SQLException{
@@ -88,20 +68,11 @@ public class Race {
             e.printStackTrace();
 
         }
-        //StarCraftDB.insertRace(9, "asdasd");
-//        System.out.print(StarCraftDB.readTableRace());
-//        StarCraftDB.readTableRace();
-//        while (resultSet.next()){
-//            int race_id = resultSet.getInt(1);
-//            String race_name = resultSet.getString(2);
-//
-//            System.out.println(race_id);
-//
-//        }
-        Race.find("Terran");
-        while (resultSet.next()){
-            int race_id = resultSet.getInt(1);
-            String race_name = resultSet.getString(2);
+        Race r=new Race();
+        ResultSet res = r.find("Terran");
+        while (res.next()){
+            int race_id = res.getInt(1);
+            String race_name = res.getString(2);
             System.out.println(race_name);
             System.out.println(race_id);
         }
