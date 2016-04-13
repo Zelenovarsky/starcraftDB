@@ -60,14 +60,14 @@ public class Race {
 
     public static void main(String[] args) throws SQLException{
 
-        Race.connection = connection;
-        try {
-            connection = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe", "raynor", "starcraft");
-        } catch (SQLException e) {
-            System.out.println("failed");
-            e.printStackTrace();
-
-        }
+//        Race.connection = connection;
+//        try {
+//            connection = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe", "raynor", "starcraft");
+//        } catch (SQLException e) {
+//            System.out.println("failed");
+//            e.printStackTrace();
+//
+//        }
         Race r=new Race();
         ResultSet res = r.find("Terran");
         while (res.next()){

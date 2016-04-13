@@ -4,9 +4,9 @@
 import java.sql.*;
 ////
 public class ConnectToDB {
-    private static String url = "jdbc:oracle:thin:@localhost:1521:xe";
-    private static String username = "raynor";
-    private static String password = "starcraft";
+    private static final String url = "jdbc:oracle:thin:@localhost:1521:xe";
+    private static final String username = "raynor";
+    private static final String password = "starcraft";
     private static Connection con;
 
     public static Connection getConnection() {
