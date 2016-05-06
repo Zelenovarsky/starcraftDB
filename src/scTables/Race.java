@@ -19,7 +19,7 @@ public class Race {
 
 
 
-    static ResultSet readTableRace() throws SQLException {
+    public static ResultSet readTableRace() throws SQLException {
         statement = connection.createStatement();
         resultSet = statement.executeQuery("select * from race ");
         return resultSet;
@@ -60,21 +60,23 @@ public class Race {
 
     public static void main(String[] args) throws SQLException{
 
-//        Race.connection = connection;
-//        try {
-//            connection = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe", "raynor", "starcraft");
-//        } catch (SQLException e) {
-//            System.out.println("failed");
-//            e.printStackTrace();
-//
-//        }
-        Race r=new Race();
-        ResultSet res = r.find("Terran");
-        while (res.next()){
-            int race_id = res.getInt(1);
-            String race_name = res.getString(2);
-            System.out.println(race_name);
-            System.out.println(race_id);
+        Race.connection = connection;
+        try {
+            connection = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe", "raynor", "starcraft");
+        } catch (SQLException e) {
+            System.out.println("failed");
+            e.printStackTrace();
+
         }
+        ResultSet res;// = Race.resultSet;
+        res = AllTables.showAll(connection);
+//        Race r=new Race();
+//        ResultSet res = r.find("Terran");
+//        while (res.next()){
+//            int race_id = res.getInt(1);
+//            String race_name = res.getString(2);
+//            System.out.println(race_name);
+//            System.out.println(race_id);
+//        }
     }
 }

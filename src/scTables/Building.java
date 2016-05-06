@@ -13,7 +13,7 @@ public class Building {
 
 
 
-    static ResultSet readTableBuilding() throws SQLException {
+    public static ResultSet readTableBuilding(Connection connection) throws SQLException {
         PreparedStatement ps = connection.prepareStatement("select* from building");
         resultSet=ps.executeQuery();
         return resultSet;

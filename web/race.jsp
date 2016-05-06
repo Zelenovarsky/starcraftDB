@@ -12,10 +12,9 @@
     e.printStackTrace();
 
 }
-    String race_name;
-    Race r =new Race();
-    race_name=request.getParameter("name");
-    ResultSet res = r.find(race_name);
+//    Race r =new Race();
+    ResultSet res = Race.readTableRace();
+
 %>
 <html lang="en">
 <head>
@@ -36,34 +35,34 @@
     </div>
     <div class="nav-bar">
         <ul class="nav">
-            <li><a href="#">Home</a></li>
+            <li><a href="index.jsp">Home</a></li>
             <li><a href="race.jsp">race</a></li>
-            <li><a href="#">Unit</a></li>
-            <li><a href="#">Building</a></li>
+            <li><a href="unit.jsp">Unit</a></li>
+            <li><a href="building.jsp">Building</a></li>
 
         </ul>
     </div>
     <div class="content">
 
-        <form name="displayForm" method="POST">
-            <table border="0">
-                <body>
-                <tr>
-                    <td>race_id:</td>
-                    <td><input type="number" name="id" value="" size="10"/></td>
-                </tr>
-                <tr>
-                    <td>race_name:</td>
-                    <td><input type="text" name="name" value="" size="50"/></td>
-                </tr>
+        <%--<form name="displayForm" method="POST">--%>
+            <%--<table border="0">--%>
+                <%--<body>--%>
+                <%--<tr>--%>
+                    <%--<td>race_id:</td>--%>
+                    <%--<td><input type="number" name="id" value="" size="10"/></td>--%>
+                <%--</tr>--%>
+                <%--<tr>--%>
+                    <%--<td>race_name:</td>--%>
+                    <%--<td><input type="text" name="name" value="" size="50"/></td>--%>
+                <%--</tr>--%>
 
-                </body>
-            </table>
-            <input type="reset" value="Clear" name="clear" />
-            <input type="submit" value="Submit" name="submit" />
-        </form>
+                <%--</body>--%>
+            <%--</table>--%>
+            <%--<input type="reset" value="Clear" name="clear" />--%>
+            <%--<input type="submit" value="Submit" name="submit" />--%>
+        <%--</form>--%>
         <!-- Tables -->
-        <h3>Table</h3>
+        <h3>List of races</h3>
         <table class="table table-striped">
             <thead>
             <tr>
@@ -83,7 +82,7 @@
 
 
     </div>
-<%--</div>--%>
+    <%--</div>--%>
 </body>
 <div class="footer">
     &copy; Copyright 2016

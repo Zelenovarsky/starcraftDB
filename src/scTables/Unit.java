@@ -13,22 +13,21 @@ public class Unit {
 
 
 
-    static ResultSet readTableUnit() throws SQLException {
+    public static ResultSet readTableUnit(Connection connection) throws SQLException {
         PreparedStatement ps = connection.prepareStatement("select* from unit");
         resultSet=ps.executeQuery();
         return resultSet;
     }
 
-    static void insertUnit(int unit_id,String unit_name, int gas, int minerals,int health, int mana,int building_id, int race_id) throws SQLException {
-        createStatement = connection.prepareCall("{call insertBuilding(?,?,?,?,?,?,?,?)}");
-        createStatement.setInt(1,unit_id);
-        createStatement.setString(2,unit_name);
-        createStatement.setInt(3,gas);
-        createStatement.setInt(4,minerals);
-        createStatement.setInt(5,health);
-        createStatement.setInt(6,mana);
-        createStatement.setInt(7,building_id);
-        createStatement.setInt(8,race_id);
+    public static void insertUnit(Connection connection,String unit_name, int gas, int minerals,int health, int mana,int building_id, int race_id) throws SQLException {
+        createStatement = connection.prepareCall("{call insertUnit(?,?,?,?,?,?,?)}");
+        createStatement.setString(1,unit_name);
+        createStatement.setInt(2,gas);
+        createStatement.setInt(3,minerals);
+        createStatement.setInt(4,health);
+        createStatement.setInt(5,mana);
+        createStatement.setInt(6,building_id);
+        createStatement.setInt(7,race_id);
 
         createStatement.execute();
     }
