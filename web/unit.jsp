@@ -70,7 +70,8 @@
                 <td><%= res.getInt(6) %></td>
                 <td><%= res.getInt(7) %></td>
                 <td><%= res.getInt(8) %></td>
-                <td><a href="editUnit.jsp?id=<%=res.getInt(1)%>">Edit</a></td>
+                <td><a href="editUnit.jsp?id=<%=res.getInt(1)%>">Edit</a>
+                    <a href="deleteUnit.jsp?id=<%=res.getInt(1)%>">Delete</a></td>
 
 
             </tr>

@@ -13,8 +13,20 @@
     e.printStackTrace();
 
 }
+    try {
+        int unit_id_for_update = Integer.parseInt(request.getParameter("id"));
+        int new_gas = Integer.parseInt(request.getParameter("gas"));
+        int new_minerals = Integer.parseInt(request.getParameter("minerals"));
+        int new_health = Integer.parseInt(request.getParameter("health"));
+        int new_mana = Integer.parseInt(request.getParameter("mana"));
+        Unit.updateTableUnit(connection,unit_id_for_update,new_gas,new_minerals,new_health,new_mana);
+    }catch(NumberFormatException ex){
 
-    // Unit.insertUnit(unit_id,unit_name,gas,minerals,health,mana,building_id,race_id);
+
+        System.out.println("Error occured with during conversion");
+    }
+
+    //Unit.updateTableUnit(unit_id_for_update,unit_name,gas,minerals,health,mana,building_id,race_id);
 %>
 <html lang="en">
 <head>
@@ -48,35 +60,23 @@
             <table border="0">
                 <body>
                 <tr>
-                    <td>unit_id:</td>
+                    <td>unit id for update:</td>
                     <td><input type="number" name="id" value="<%=request.getParameter("id")%>" size="10"/></td>
                 </tr>
                 <tr>
-                    <td>unit_name:</td>
-                    <td><input type="text" name="name" value="" size="50"/></td>
-                </tr>
-                <tr>
-                    <td>gas:</td>
+                    <td>new gas:</td>
                     <td><input type="number" name="id" value="" size="10"/></td>
                 </tr>
                 <tr>
-                    <td>minerals:</td>
+                    <td>new minerals:</td>
                     <td><input type="number" name="id" value="" size="10"/></td>
                 </tr>
                 <tr>
-                    <td>health:</td>
+                    <td>new health:</td>
                     <td><input type="number" name="id" value="" size="10"/></td>
                 </tr>
                 <tr>
-                    <td>mana:</td>
-                    <td><input type="number" name="id" value="" size="10"/></td>
-                </tr>
-                <tr>
-                    <td>building_id:</td>
-                    <td><input type="number" name="id" value="" size="10"/></td>
-                </tr>
-                <tr>
-                    <td>race_id:</td>
+                    <td>new mana:</td>
                     <td><input type="number" name="id" value="" size="10"/></td>
                 </tr>
                 </body>

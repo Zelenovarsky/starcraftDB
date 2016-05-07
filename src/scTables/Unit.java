@@ -28,11 +28,10 @@ public class Unit {
         createStatement.setInt(5,mana);
         createStatement.setInt(6,building_id);
         createStatement.setInt(7,race_id);
-
         createStatement.execute();
     }
 
-    static void updateTableUnit(int unit_id_for_update, int new_gas, int new_minerals, int new_health, int new_mana) throws SQLException {
+    public static void updateTableUnit(Connection connection,int unit_id_for_update, int new_gas, int new_minerals, int new_health, int new_mana) throws SQLException {
         createStatement = connection.prepareCall("{call updateTableUnit(?,?,?,?,?)}");
         createStatement.setInt(1, unit_id_for_update);
         createStatement.setInt(2, new_gas);
@@ -42,11 +41,10 @@ public class Unit {
         createStatement.execute();
     }
 
-    static ResultSet deleteFromBuilding(int building_id) throws SQLException {
-        PreparedStatement ps = connection.prepareStatement("delete from building where building_id=?");
-        ps.setInt(1,building_id);
-        resultSet=ps.executeQuery();
-        return resultSet;
+    public static void deleteUnit(Connection connection,int unit_id) throws SQLException {
+        PreparedStatement ps = connection.prepareStatement("delete from unit where unit_id=?");
+        ps.setInt(1,unit_id);
+        ps.executeQuery();
     }
 
     public static ResultSet find(String building_name) throws SQLException {

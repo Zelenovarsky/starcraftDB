@@ -21,11 +21,18 @@
         int mana = Integer.parseInt(request.getParameter("mana"));
         int building_id = Integer.parseInt(request.getParameter("building_id"));
         int race_id = Integer.parseInt(request.getParameter("race_id"));
-        Unit.insertUnit(connection,unit_name,gas,minerals,health,mana,building_id,race_id);
-    }catch(NumberFormatException ex){
+        try {
+            Unit.insertUnit(connection, unit_name, gas, minerals, health, mana, building_id, race_id);
+        }catch (SQLException ex){
+            out.println("<p> The record cannot be added, check race and building id's </p>");
+            out.println("<br>");
+            out.println("<a href='unit.jsp'> RETURN TO UNIT PAGE </a>");
+        }
+    }catch(NumberFormatException ex) {
 
 
         System.out.println("Error occured with during conversion");
+
     }
 //    Unit.insertUnit(connection,unit_name,gas,minerals,health,mana,building_id,race_id);
 %>
