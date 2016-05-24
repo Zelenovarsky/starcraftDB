@@ -62,7 +62,7 @@
     <%--<input type="submit" value="Submit" name="submit" />--%>
     <%--</form>--%>
     <!-- Tables -->
-    <h3>List of races</h3>
+    <h3>Full information list</h3>
     <table class="table table-striped">
       <thead>
       <tr>

@@ -4,6 +4,7 @@ Base styles
 
 body
 {
+    width: auto;
     margin: 0;
     padding: 0;
     color: #333;
@@ -49,6 +50,9 @@ hr
 
 table
 {
+    overflow-x: auto;
+    padding: 10px;
+    text-align: left;
     background-color: transparent;
     border-spacing: 0;
     border-collapse: collapse;
@@ -75,7 +79,7 @@ Layout styles
 
 .container
 {
-    max-width: 50em;
+    max-width: 60em;
     margin: 0 auto;
     background-color: #fff;
 }
@@ -95,7 +99,11 @@ Layout styles
     padding: 0;
 }
 
-.content { padding: 1em 1.25em; }
+.content
+{
+
+    padding: auto;
+}
 
 .footer
 {

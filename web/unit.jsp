@@ -44,11 +44,11 @@
         </ul>
     </div>
     <div class="content">
-        <h3>List of races</h3>
-        <table class="table table-striped">
+        <h3>List of units</h3>
+        <table class="table" width="5000">
             <thead>
             <tr>
-                <th>id</th>
+                <%--<th>id</th>--%>
                 <th>name</th>
                 <th>gas</th>
                 <th>minerals</th>
@@ -62,7 +62,7 @@
             <tbody>
             <% while(res.next()){ %>
             <tr>
-                <td><%= res.getInt(1) %></td>
+                <%--<td><%= res.getInt(1) %></td>--%>
                 <td><%= res.getString(2) %></td>
                 <td><%= res.getInt(3) %></td>
                 <td><%= res.getInt(4) %></td>
@@ -83,13 +83,10 @@
         </form>
 
     </div>
-    <%--<form name="addForm" action="addUnit.jsp" method="POST">--%>
-        <%--<input type="submit" value="Add Unit" name="addUnit" />--%>
-    <%--</form>--%>
-    <%--</div>--%>
+
 </body>
 <div class="footer">
     &copy; Copyright 2016
 </div>
-</div>
+
 </html>
